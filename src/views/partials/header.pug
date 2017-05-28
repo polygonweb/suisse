@@ -1,0 +1,49 @@
+.page-header
+		.container
+			.page-header__inner
+				a.page-header__logo
+					include logo.svg
+
+				ul.page-header__user-menu.user-menu
+					li.user-menu__item
+						a.user-menu__link(href="javascript:void(0)") Личный кабинет
+					li.user-menu__item
+						a.user-menu__link(href="javascript:void(0)") Регистрация
+					li.user-menu__item.user-menu__item_signin
+						a.user-menu__link(href="javascript:void(0)")
+							svg(xmlns="http://www.w3.org/2000/svg" width="13" height="19" viewBox="0 0 12.81 18.54")
+								path(d="M11.94 8.75V5.57A5.54 5.54 0 0 0 6.73 0 5.46 5.46 0 0 0 1.1 5.45v3.28a.23.23 0 0 0 .24.27h1.23c.12 0 .1-.1.1-.24l.05-3.18a3.92 3.92 0 0 1 3.66-3.91 3.75 3.75 0 0 1 4 3.75v3.33")
+								path(d="M0 18.54V7.65h12.81v10.89")
+							| Войти
+					li.user-menu__item
+						a.user-menu__link(href="javascript:void(0)") Контакты
+					li.user-menu__item.lang-select
+						.user-menu__link.lang-select__current
+							img.lang-select__icon(src="assets/img/flags/ru.svg", alt="RU", width="18")
+							span.lang-select__text RU
+						.lang-select__list
+							a.lang-select__item(href="javascript:void(0)")
+								img.lang-select__icon(src="assets/img/flags/ru.svg", alt="RU", width="18")
+								| RU
+							a.lang-select__item(href="javascript:void(0)")
+								img.lang-select__icon(src="assets/img/flags/gb.svg", alt="GB", width="18")
+								| ENG
+					li.user-menu__item
+						a.user-menu__apply.apply-btn(href="javascript:void(0)") Открыть счет
+
+				ul.page-header__main-menu.main-menu
+					li.main-menu__item
+						a(href="javascript:void(0)").main-menu__link Обучение
+					li.main-menu__item
+						a(href="javascript:void(0)").main-menu__link Торговля
+					li.main-menu__item
+						a(href="javascript:void(0)").main-menu__link Аналитика
+					li.main-menu__item
+						a(href="javascript:void(0)").main-menu__link Акции и бонусы
+					li.main-menu__item
+						a(href="javascript:void(0)").main-menu__link О компании
+
+				button.page-header__toggle.menu-toggle
+					.menu-toggle__line.menu-toggle__line_top
+					.menu-toggle__line.menu-toggle__line_middle
+					.menu-toggle__line.menu-toggle__line_bottom

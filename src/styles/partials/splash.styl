@@ -1,0 +1,86 @@
+.splash
+	position relative
+	overflow hidden
+	background-color #b2deff
+
+	&::before
+		content ""
+		position absolute
+		z-index 1
+		top 0
+		left 0
+		width 100%
+		height 100%
+		background-color rgba(0, 0, 0, .2)
+
+	&__inner
+		margin-left auto
+		margin-right auto
+		max-width 1180px
+
+		+mq("medium")
+			max-width none
+
+	&__image
+		position absolute
+		bottom 0
+
+		&_bg
+			left 0
+			right 0
+			margin 0 auto
+
+		&_side
+			z-index 1
+			left 0
+
+		&_flag
+			z-index 1
+			right 0
+
+.splash-content
+	position relative
+	z-index 2
+	display table
+	width 100%
+	height 100vh
+	min-height 100vh
+	border-collapse collapse
+
+	+mq("small")
+		height auto
+		min-height 0
+
+	&__inner
+		display table-cell
+		vertical-align middle
+		padding 180px 0
+
+		+mq("small")
+			padding 120px 0 100px
+
+.splash-title
+	font-size 50px
+	font-weight normal
+	text-shadow 7px 4px 7.9px rgba(0, 0, 0, 0.18)
+
+	&__accent
+		margin-bottom 37px
+		display block
+		font 900 normal 300%/0.86 "Proxima Nova", "PT Sans", sans-serif
+		// text-shadow 7px 4px 7.9px rgba(0, 0, 0, 0.18)
+
+	+mq("medium")
+		font-size 40px
+
+		&__accent
+			font-size 100px
+
+	+mq("small")
+		font-size 26px
+		line-height 1.34
+
+		&__accent
+			margin-bottom 10px
+			// font-size 49px
+			font-size 46px

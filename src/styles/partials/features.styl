@@ -1,0 +1,90 @@
+$gutter = 26px
+$small-mq = "(max-width: 860px)"
+
+.features
+	padding 0 $gutter
+	overflow hidden
+	background-color #008bd7
+	+pageLoad()
+		background-image url("../img/pattern.png")
+
+		+mq("retina")
+			background-image url("../img/pattern@2x.png")
+			background-size 100px 100px
+
+.feature-grid
+	margin-left  -1 * $gutter
+	margin-right -1 * $gutter
+	padding 92px 0
+	font-size 0
+
+	+mq("medium")
+		padding-top 42px
+		padding-bottom 42px
+
+	+mq($small-mq)
+		padding-top 32px
+		padding-bottom 32px
+
+.feature
+	margin-bottom 49px
+	box-sizing border-box
+	width 25%
+	display inline-block
+	vertical-align top
+	padding 0 $gutter
+	font-size 25px
+
+	&__accent
+		display block
+		font-size 35px
+		text-transform uppercase
+
+	&_1
+	&_2
+		width 50%
+		vertical-align middle
+
+	&_1 &__accent
+		font-size 65px
+
+	&_2
+		font-size 40px
+
+	&_2 &__accent
+		font-size 50px
+
+	+mq("medium")
+		width 50%
+
+		&_1
+		&_2
+			vertical-align top
+
+		&_1 &__accent
+			font-size 50px
+
+		&_2
+		&_3
+			font-size 20px
+		&_2 &__accent
+		&_3 &__accent
+			font-size 30px
+
+	+mq($small-mq)
+		margin-bottom 27px
+		width 100%
+		font-size 20px
+
+		&:last-child
+			margin-bottom 0
+
+		&__accent
+			font-size 25px
+
+		&_1 &__accent
+			font-size 35px
+
+		&_2
+		&_3
+			font-size 20px
